@@ -1,0 +1,182 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0f0f;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    color:#d4af37;
+    font-family:'Cinzel',serif;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    padding:20px;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("assets/images/family.jpg") center/cover no-repeat;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    backdrop-filter:blur(3px);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+
+.welcome{
+    color:#d4af37;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:3.3rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+.date{
+    font-size:1.2rem;
+    margin-bottom:35px;
+}
+
+#countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:35px;
+}
+
+#countdown div{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(212,175,55,.4);
+    border-radius:18px;
+    padding:18px;
+    width:90px;
+    backdrop-filter:blur(10px);
+}
+
+#countdown span{
+    display:block;
+    font-size:2rem;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.gold-btn,
+.outline-btn{
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.35s;
+    font-weight:600;
+}
+
+.gold-btn{
+    background:#d4af37;
+    color:#000;
+}
+
+.gold-btn:hover{
+    transform:translateY(-4px);
+}
+
+.outline-btn{
+    border:2px solid #d4af37;
+    color:#d4af37;
+}
+
+.outline-btn:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+section{
+    padding:90px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+section h2{
+    font-family:'Cinzel',serif;
+    color:#d4af37;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:2.3rem;
+}
+
+section p{
+    text-align:center;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+#countdown{
+    gap:10px;
+}
+
+#countdown div{
+    width:75px;
+    padding:15px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.gold-btn,
+.outline-btn{
+    width:100%;
+}
+
+}
