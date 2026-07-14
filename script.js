@@ -1,0 +1,1 @@
+const t=new Date('2026-07-20T13:00:00').getTime();function u(){let d=t-Date.now();if(d<0)return;let a=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);['days','hours','minutes','seconds'].forEach((id,i)=>document.getElementById(id).textContent=[a,h,m,s][i]);}u();setInterval(u,1000);
